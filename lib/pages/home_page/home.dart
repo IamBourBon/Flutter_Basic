@@ -38,7 +38,7 @@ class HomePage extends StatelessWidget {
                           style: BorderStyle.solid)),
                   child: IconButton(
                       onPressed: () {
-                        // FirebaseAuth.instance.signOut();
+                        FirebaseAuth.instance.signOut();
                         Navigator.pushNamedAndRemoveUntil(
                             context, AuthPage.routeName, (route) => false);
                       },

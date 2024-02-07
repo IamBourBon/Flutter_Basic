@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/components/bottom_bar.dart';
 import 'package:flutter_application_2/pages/sign_up/sign_up.dart';
 
 class AuthPage extends StatelessWidget {
@@ -16,7 +17,7 @@ class AuthPage extends StatelessWidget {
             return const CircularProgressIndicator();
           } else {
             if (snapshot.hasData) {
-              return const BottomAppBar();
+              return const BottomBar();
             } else {
               return const SignUp();
             }
