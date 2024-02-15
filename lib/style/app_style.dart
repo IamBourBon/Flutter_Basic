@@ -4,7 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 class AppStyle {
   //App Image
   static const String patternImage = "images/pattern.png";
-  static const String imageSignIn = "images/image1.jpg";
+  static const String imageStarted = "images/image1.jpg";
+  static const String imageLogin = "images/image2.jpg";
 
   //App Logo
   static const String logoImage = "images/logo.png";

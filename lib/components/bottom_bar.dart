@@ -15,7 +15,15 @@ class _BottomBarState extends State<BottomBar> {
     HomePage(),
     const Center(
       child: Text(
-        "Search",
+        "Notification",
+        style: TextStyle(
+          color: AppStyle.primaryColor,
+        ),
+      ),
+    ),
+    const Center(
+      child: Text(
+        "Transfer",
         style: TextStyle(
           color: AppStyle.primaryColor,
         ),
@@ -24,14 +32,6 @@ class _BottomBarState extends State<BottomBar> {
     const Center(
       child: Text(
         "Profile",
-        style: TextStyle(
-          color: AppStyle.primaryColor,
-        ),
-      ),
-    ),
-    const Center(
-      child: Text(
-        "Notification",
         style: TextStyle(
           color: AppStyle.primaryColor,
         ),
