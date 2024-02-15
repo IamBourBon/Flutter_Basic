@@ -3,25 +3,25 @@ import 'package:google_fonts/google_fonts.dart';
 
 class AppStyle {
   //App Image
-  static const String patternImage = "images/pattern.png";
-  static const String imageSignIn = "images/image1.jpg";
+  static const String patternImage = "assets/images/pattern.png";
+  static const String imageSignIn = "assets/images/image1.jpg";
 
   //App Logo
-  static const String logoImage = "images/logo.png";
-  static const String logoVisa = "images/logo_visa_1.png";
+  static const String logoImage = "assets/images/logo.png";
+  static const String logoVisa = "assets/images/logo_visa_1.png";
 
   //App Icon
-  static const String qrcodeIcon = "images/icon_qr_2.png";
-  static const String googleIcon = "images/icon_google_2.png";
-  static const String homeIcon = "images/icon_home_1.png";
-  static const String bellIcon = "images/icon_bell_1.png";
-  static const String transferIcon = "images/icon_transfer_1.png";
-  static const String profileIcon = "images/icon_profile_1.png";
-  static const String moreIcon = "images/icon_more_3.png";
-  static const String sendIcon = "images/icon_send_3.png";
-  static const String receivedIcon = "images/icon_received.png";
-  static const String lockIcon = "images/icon_lock.png";
-  static const String settingIcon = "images/icon_setting.png";
+  static const String qrcodeIcon = "assets/images/icon_qr_2.png";
+  static const String googleIcon = "assets/images/icon_google_2.png";
+  static const String homeIcon = "assets/images/icon_home_1.png";
+  static const String bellIcon = "assets/images/icon_bell_1.png";
+  static const String transferIcon = "assets/images/icon_transfer_1.png";
+  static const String profileIcon = "assets/images/icon_profile_1.png";
+  static const String moreIcon = "assets/images/icon_more_3.png";
+  static const String sendIcon = "assets/images/icon_send_3.png";
+  static const String receivedIcon = "assets/images/icon_received.png";
+  static const String lockIcon = "assets/images/icon_lock.png";
+  static const String settingIcon = "assets/images/icon_setting.png";
 
   //App Style
   static const primaryColor = Color(0xff185ADB);
