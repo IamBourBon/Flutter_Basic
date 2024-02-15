@@ -57,30 +57,33 @@ class HomePage extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    SingleMenu(
-                      text: "Send",
-                      icon: AppStyle.sendIcon,
-                      onPressed: () => {print('aaa')},
-                    ),
-                    SingleMenu(
-                      text: "Receive",
-                      icon: AppStyle.receivedIcon,
-                      onPressed: () => {print('aaa')},
-                    ),
-                    SingleMenu(
-                      text: "Lock Card",
-                      icon: AppStyle.lockIcon,
-                      onPressed: () => {print('aaa')},
-                    ),
-                    SingleMenu(
-                      text: "Settings",
-                      icon: AppStyle.settingIcon,
-                      onPressed: () => {print('aaa')},
-                    ),
-                  ],
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      SingleMenu(
+                        text: "Send",
+                        icon: AppStyle.sendIcon,
+                        onPressed: () => {print('aaa')},
+                      ),
+                      SingleMenu(
+                        text: "Receive",
+                        icon: AppStyle.receivedIcon,
+                        onPressed: () => {print('aaa')},
+                      ),
+                      SingleMenu(
+                        text: "Lock Card",
+                        icon: AppStyle.lockIcon,
+                        onPressed: () => {print('aaa')},
+                      ),
+                      SingleMenu(
+                        text: "Settings",
+                        icon: AppStyle.settingIcon,
+                        onPressed: () => {print('aaa')},
+                      ),
+                    ],
+                  ),
                 ),
               ),
 
