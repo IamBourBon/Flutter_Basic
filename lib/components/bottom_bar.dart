@@ -1,5 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/pages/home_page/home.dart';
+import 'package:flutter_application_2/services/google_service.dart';
 import 'package:flutter_application_2/style/app_style.dart';
 
 class BottomBar extends StatefulWidget {
@@ -10,7 +12,38 @@ class BottomBar extends StatefulWidget {
   State<BottomBar> createState() => _BottomBarState();
 }
 
-class _BottomBarState extends State<BottomBar> {
+class _BottomBarState extends State<BottomBar> with WidgetsBindingObserver {
+  @override
+  initState(){
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  dispose(){
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state){
+    super.didChangeAppLifecycleState(state);
+
+    final auth = GoogleService();
+
+    if(state == AppLifecycleState.inactive || state == AppLifecycleState.detached){
+      return;
+    }
+
+    final isBackground = state == AppLifecycleState.paused;
+
+    if(isBackground){
+      if(auth.auth.currentUser != null){
+        auth.handleSignOut();
+      }
+    }
+  }
+
   List<Widget> tabs = [
     HomePage(),
     const Center(

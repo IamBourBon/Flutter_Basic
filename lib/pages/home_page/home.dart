@@ -5,10 +5,14 @@ import 'package:flutter_application_2/pages/auth_page/auth_page.dart';
 import 'package:flutter_application_2/pages/home_page/components/payment_card.dart';
 import 'package:flutter_application_2/pages/home_page/components/recent_transaction.dart';
 import 'package:flutter_application_2/pages/home_page/components/single_menu.dart';
+import 'package:flutter_application_2/services/google_service.dart';
 import 'package:flutter_application_2/style/app_style.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
+
+  final Auth = GoogleService();
+
   final user = FirebaseAuth.instance.currentUser;
 
   @override
@@ -38,7 +42,7 @@ class HomePage extends StatelessWidget {
                           style: BorderStyle.solid)),
                   child: IconButton(
                       onPressed: () {
-                        FirebaseAuth.instance.signOut();
+                        Auth.handleSignOut();
                         Navigator.pushNamedAndRemoveUntil(
                             context, AuthPage.routeName, (route) => false);
                       },
