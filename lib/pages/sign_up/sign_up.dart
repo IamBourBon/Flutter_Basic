@@ -9,19 +9,23 @@ class SignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
-      body: Column( 
-        children: [
-          const Spacer(),
-          Image.asset(AppStyle.imageSignIn),
-          const Spacer(),
-          //text portion
-          const TextPortion(),
-          //button area
-          const Spacer(),
-          const ButtonPortion(),
-          const Spacer(),
-        ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column( 
+            children: [
+              Image.asset(AppStyle.imageStarted),
+              SizedBox(height: size.height / 100),
+              //text portion
+              TextPortion(size: size),
+              //button area
+              SizedBox(height: size.height / 100 * 8),
+              const ButtonPortion(),
+              SizedBox(height: size.height / 100),
+            ],
+          ),
+        ),
       ),
     );
   }

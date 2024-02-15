@@ -64,10 +64,7 @@ class ButtonPortion extends StatelessWidget {
             },
           ),
 
-          const SizedBox(
-            height: 5,
-          ),
-
+      
           //SIGN IN
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
